@@ -209,7 +209,7 @@ TEST(LockFreeQueue_blocking_pop) {
 // sleep_for-based polling would be caught.
 TEST(LockFreeQueue_wake_latency_after_push) {
     LockFreeQueue<Pdu> queue(100);
-    std::atomic<std::chrono::steady_clock::time_point> woke_at;
+    std::atomic<std::chrono::steady_clock::time_point> woke_at(std::chrono::steady_clock::time_point{});
 
     std::thread consumer([&]() {
         auto pdu = queue.pop(std::chrono::milliseconds(500));
