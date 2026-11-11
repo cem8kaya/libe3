@@ -543,6 +543,22 @@ See **[`swig/README.md`](swig/README.md)** for the architecture, rationale, and 
 full Python usage example, and [`swig/e3_dapp_session.hpp`](swig/e3_dapp_session.hpp)
 for the documented API.
 
+### Interactive Jupyter Notebook & Python Examples
+
+For researchers and developers, an end-to-end interactive development workflow and simulation suite is provided:
+
+- **Jupyter Notebook**: [`notebooks/oran_dapp_development_and_analysis.ipynb`](notebooks/oran_dapp_development_and_analysis.ipynb)
+  - Interactive setup and verification of SWIG `libe3py` bindings
+  - Low-latency wire serialization benchmarks (ASN.1 APER vs Protobuf vs JSON)
+  - Real-time I/Q spectrum waterfall and interference detection
+  - Dynamic mitigation policy comparison (`SmartGuardBandPolicy`, MedMAD, Energy Detection)
+  - Embedded 47-assertion pytest verification suite
+- **Python Examples**: [`examples/python/`](examples/python/)
+  - `mock_du_e3_agent.py`: Synthetic O-DU radio telemetry publisher with dynamic jamming injection
+  - `my_first_dapp.py`: Real-time spectrum guardian dApp with automated PRB blacklisting
+  - `test_python_sim.sh`: Automated multi-process simulation runner
+  - See [`examples/python/README.md`](examples/python/README.md) for execution instructions.
+
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details,

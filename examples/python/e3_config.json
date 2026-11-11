@@ -1,0 +1,21 @@
+{
+  "E3Configuration": {
+    "ranNodeId": "gnb-du-local-01",
+    "link": "zmq",
+    "transport": "ipc",
+    "encoding": "json",
+    "ipcSocketDir": "/tmp/e3_sockets",
+    "setupEndpoint": "ipc:///tmp/e3_sockets/e3_setup.ipc",
+    "indicationEndpoint": "ipc:///tmp/e3_sockets/e3_indication.ipc",
+    "controlEndpoint": "ipc:///tmp/e3_sockets/e3_control.ipc",
+    "radioConfig": {
+      "ruProfile": "rfsim",
+      "numPrbs": 51,
+      "subcarrierSpacingKhz": 30,
+      "centerFreqHz": 3619200000,
+      "fp16Beta": 0.00048828125
+    },
+    "telemetryPeriodUs": 1000
+  }
+}
+
